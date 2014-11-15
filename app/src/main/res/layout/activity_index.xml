@@ -1,0 +1,24 @@
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:gravity="center_horizontal">
+
+    <Button
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="Material (ScrollView)"
+            android:id="@+id/button_ex2_scroll"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"/>
+
+    <Button
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="Material (ListView)"
+            android:id="@+id/button_ex2_list"
+            android:layout_margin="8dp"/>
+</LinearLayout>

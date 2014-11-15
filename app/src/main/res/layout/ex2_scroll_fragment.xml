@@ -1,0 +1,65 @@
+<jp.co.cyberagent.codesample.widget.ObservableScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                                         android:layout_width="match_parent"
+                                                         android:layout_height="match_parent"
+                                                         android:id="@+id/ex2_scroll"
+                                                         android:scrollbars="none">
+
+    <FrameLayout
+            android:id="@+id/ex2_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#9c27b0"
+                android:id="@+id/frame_header">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Header"
+                    android:id="@+id/header_text"
+                    android:gravity="center"
+                    android:textSize="64sp"
+                    android:textColor="#ffffff"/>
+        </FrameLayout>
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="960dp"
+                android:id="@+id/frame_content"
+                android:layout_marginTop="248dp"
+                android:background="#e1bee7">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Content\n\nContent\n\nContent\n\nContent"
+                    android:id="@+id/content_text"
+                    android:gravity="center"
+                    android:textSize="64sp"
+                    android:textColor="#000000"
+                    android:inputType="textMultiLine"/>
+        </FrameLayout>
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/frame_sticky_bar"
+                android:layout_marginTop="200dp"
+                android:background="#f3e5f5">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sticky Tab"
+                    android:id="@+id/sticky_bar_text"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textColor="#000000"/>
+        </FrameLayout>
+
+
+    </FrameLayout>
+</jp.co.cyberagent.codesample.widget.ObservableScrollView>

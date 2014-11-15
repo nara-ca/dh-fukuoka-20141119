@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="ここはActivityです"
+                android:id="@+id/ex1_activity_text"
+                android:textColor="#663333"
+                android:textSize="24sp"
+                android:layout_margin="8dp"/>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activityのボタン"
+                android:id="@+id/ex1_activity_button"
+                android:layout_below="@+id/ex1_activity_text"
+                android:layout_margin="8dp"
+                android:layout_marginTop="0dp"/>
+    </RelativeLayout>
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/imageView"
+            android:background="#999999"/>
+
+    <fragment
+            android:name="jp.co.cyberagent.codesample.fragment.Ex1Fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/ex1_fragment"
+            android:id="@+id/ex1_fragment"/>
+</LinearLayout>

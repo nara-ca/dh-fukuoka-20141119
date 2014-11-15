@@ -1,0 +1,14 @@
+<FrameLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/activity_container">
+
+    <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="jp.co.cyberagent.codesample.fragment.Ex2ListFragment"
+            android:id="@+id/fragment"
+            tools:layout="@layout/ex2_list_fragment"/>
+</FrameLayout>

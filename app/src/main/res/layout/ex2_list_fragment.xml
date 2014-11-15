@@ -1,0 +1,50 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/ex2_fragment_container"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+    <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ex2_list"
+            android:background="#ff80ab"
+            android:divider="#f48fb1"
+            android:dividerHeight="1dp"
+            android:scrollbars="none"/>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#e91b63"
+            android:id="@+id/frame_header">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Header"
+                android:id="@+id/header_text"
+                android:gravity="center"
+                android:textSize="64sp"
+                android:textColor="#ffffff"/>
+    </FrameLayout>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:id="@+id/frame_sticky_bar"
+            android:layout_marginTop="200dp"
+            android:background="#fce4ec">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Sticky Tab"
+                android:id="@+id/sticky_bar_text"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textColor="#000000"/>
+    </FrameLayout>
+
+
+</FrameLayout>
+
