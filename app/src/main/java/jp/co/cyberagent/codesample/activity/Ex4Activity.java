@@ -67,10 +67,10 @@ public class Ex4Activity extends Activity implements View.OnClickListener,
                 fireButton1Event(view);
                 break;
             case R.id.ex4_button_2:
-
+                fireButton2Event(view);
                 break;
             case R.id.ex4_button_3:
-
+                finish();
                 break;
             default:
 
@@ -97,7 +97,7 @@ public class Ex4Activity extends Activity implements View.OnClickListener,
                 }
 
                 List<String> ret = new ArrayList<String>();
-                for (int i = 0 ; i < 30 ; i++) {
+                for (int i = 0; i < 30; i++) {
                     ret.add("String " + i);
                 }
                 return ret;
@@ -109,7 +109,8 @@ public class Ex4Activity extends Activity implements View.OnClickListener,
     @Override
     public void onLoadFinished(Loader<List<String>> loader, List<String> o) {
         Toast.makeText(this, "リストの読み込みが終了しました。", Toast.LENGTH_SHORT).show();
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, o);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, o);
         ((ListView) findViewById(R.id.ex4_list)).setAdapter(adapter);
     }
 
@@ -132,6 +133,12 @@ public class Ex4Activity extends Activity implements View.OnClickListener,
 
     public void fireButton1Event(View view) {
         getLoaderManager().getLoader(0).forceLoad();
+    }
+
+    public void fireButton2Event(View view) {
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, new ArrayList<String>());
+        ((ListView) findViewById(R.id.ex4_list)).setAdapter(adapter);
     }
 
     public static void startEx4Activity(Activity fromActivity) {
