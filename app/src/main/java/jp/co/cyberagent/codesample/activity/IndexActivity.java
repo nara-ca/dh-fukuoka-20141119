@@ -35,6 +35,16 @@ public class IndexActivity extends Activity {
         Ex4Activity.startEx4Activity(this);
     }
 
+    @OnClick(R.id.button_ex5_draw)
+    public void showEx5DrawActivity() {
+        Ex5OnDrawActivity.startEx5OnDrawActivity(this);
+    }
+
+    @OnClick(R.id.button_ex5_set)
+    public void showEx5SetActivity() {
+        Ex5OnSetActivity.startEx5OnSetActivity(this);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

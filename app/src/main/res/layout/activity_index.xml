@@ -8,8 +8,8 @@
     <Button
             android:layout_width="240dp"
             android:layout_height="wrap_content"
-            android:text="Sample Code"
-            android:id="@+id/button_ex4"
+            android:text="RoundImage (Draw)"
+            android:id="@+id/button_ex5_draw"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
@@ -18,15 +18,29 @@
     <Button
             android:layout_width="240dp"
             android:layout_height="wrap_content"
-            android:text="Material (ScrollView)"
+            android:text="RoundImage (Set)"
+            android:id="@+id/button_ex5_set"
+            android:layout_margin="8dp"/>
+
+    <Button
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="Material (Scroll)"
             android:id="@+id/button_ex2_scroll"
             android:layout_margin="8dp"/>
 
     <Button
             android:layout_width="240dp"
             android:layout_height="wrap_content"
-            android:text="Material (ListView)"
+            android:text="Material (List)"
             android:id="@+id/button_ex2_list"
+            android:layout_margin="8dp"/>
+
+    <Button
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="Sample Code"
+            android:id="@+id/button_ex4"
             android:layout_margin="8dp"/>
 
 </LinearLayout>
