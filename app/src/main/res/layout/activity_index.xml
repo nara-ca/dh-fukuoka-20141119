@@ -8,12 +8,19 @@
     <Button
             android:layout_width="240dp"
             android:layout_height="wrap_content"
-            android:text="Material (ScrollView)"
-            android:id="@+id/button_ex2_scroll"
-            android:layout_marginTop="24dp"
+            android:text="Sample Code"
+            android:id="@+id/button_ex4"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="24dp"/>
+
+    <Button
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="Material (ScrollView)"
+            android:id="@+id/button_ex2_scroll"
+            android:layout_margin="8dp"/>
 
     <Button
             android:layout_width="240dp"
@@ -21,4 +28,5 @@
             android:text="Material (ListView)"
             android:id="@+id/button_ex2_list"
             android:layout_margin="8dp"/>
+
 </LinearLayout>

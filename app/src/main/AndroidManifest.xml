@@ -32,6 +32,10 @@
                 android:name=".activity.Ex2ListActivity"
                 android:label="@string/title_activity_ex2">
         </activity>
+        <activity
+                android:name=".activity.Ex4Activity"
+                android:label="@string/title_activity_ex4">
+        </activity>
     </application>
 
 </manifest>

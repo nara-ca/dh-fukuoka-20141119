@@ -30,6 +30,11 @@ public class IndexActivity extends Activity {
         Ex2ListActivity.startEx2ListAcrivity(this);
     }
 
+    @OnClick(R.id.button_ex4)
+    public void showEx4SampleActivity() {
+        Ex4Activity.startEx4Activity(this);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
