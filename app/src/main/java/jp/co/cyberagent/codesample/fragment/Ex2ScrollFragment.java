@@ -80,9 +80,13 @@ public class Ex2ScrollFragment extends Fragment implements ObservableScrollView.
         // ScrollViewのスクロール位置にあわせて、HeaderとStickyBarのtranslationを設定する
         if (t < mHeaderHeight) {
             mHeader.setTranslationY(t / 2);
+        } else {
+            mHeader.setTranslationY(0);
         }
         if (t >= mHeaderHeight) {
             mStickyBar.setTranslationY(t - mHeaderHeight);
+        } else {
+            mStickyBar.setTranslationY(0);
         }
     }
 }
