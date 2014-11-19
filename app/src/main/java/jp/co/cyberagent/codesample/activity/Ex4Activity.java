@@ -5,6 +5,7 @@ import android.app.LoaderManager;
 import android.content.AsyncTaskLoader;
 import android.content.Intent;
 import android.content.Loader;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -13,7 +14,9 @@ import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,7 +25,8 @@ import java.util.List;
 import jp.co.cyberagent.codesample.R;
 
 public class Ex4Activity extends Activity implements View.OnClickListener,
-        LoaderManager.LoaderCallbacks<List<String>>, AbsListView.OnScrollListener {
+        LoaderManager.LoaderCallbacks<List<String>>, AbsListView.OnScrollListener,
+        CompoundButton.OnCheckedChangeListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,8 @@ public class Ex4Activity extends Activity implements View.OnClickListener,
         ((Button) findViewById(R.id.ex4_button_1)).setOnClickListener(this);
         ((Button) findViewById(R.id.ex4_button_2)).setOnClickListener(this);
         ((Button) findViewById(R.id.ex4_button_3)).setOnClickListener(this);
+
+        ((Switch) findViewById(R.id.ex4_switch)).setOnCheckedChangeListener(this);
 
         // AsyncTaskLoaderの初期化
         getLoaderManager().initLoader(0, null, this);
@@ -129,6 +135,15 @@ public class Ex4Activity extends Activity implements View.OnClickListener,
     @Override
     public void onScrollStateChanged(AbsListView absListView, int i) {
 
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+        if (b) {
+            findViewById(R.id.ex4_root).setBackgroundColor(Color.parseColor("#639c12"));
+        } else {
+            findViewById(R.id.ex4_root).setBackgroundColor(Color.WHITE);
+        }
     }
 
     public void fireButton1Event(View view) {
