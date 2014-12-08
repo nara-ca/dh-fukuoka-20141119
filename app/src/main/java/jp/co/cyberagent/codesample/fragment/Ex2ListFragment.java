@@ -14,27 +14,23 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
 import jp.co.cyberagent.codesample.R;
 import jp.co.cyberagent.codesample.adapter.Ex2ListAdapter;
 
 public class Ex2ListFragment extends Fragment implements AbsListView.OnScrollListener {
 
+    // Viewの位置調整を計算するためにheader、sticky barの高さを使用します。
+    // 本来であればこれは /res/values/dimens.xmlに定義しておきます（今回は簡単のためベタ書き）
     private static final int HEADER_HEIGHT_DIP = 200;
     private static final int STICKY_BAR_HEIGHT_DIP = 48;
 
     private int mHeaderHeight;
     private int mStickyBarHeight;
 
-    @InjectView(R.id.ex2_list)
-    ListView mListView;
-    @InjectView(R.id.frame_header)
-    FrameLayout mHeader;
-    @InjectView(R.id.header_text)
-    TextView mHeaderText;
-    @InjectView(R.id.frame_sticky_bar)
-    FrameLayout mStickyBar;
+    private ListView mListView;
+    private FrameLayout mHeader;
+    private TextView mHeaderText;
+    private FrameLayout mStickyBar;
 
     /**
      * Use this factory method to create a new instance of
@@ -65,7 +61,11 @@ public class Ex2ListFragment extends Fragment implements AbsListView.OnScrollLis
             Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.ex2_list_fragment, container, false);
-        ButterKnife.inject(this, view);
+
+        mListView = (ListView) view.findViewById(R.id.ex2_list);
+        mHeader = (FrameLayout) view.findViewById(R.id.frame_header);
+        mHeaderText = (TextView) view.findViewById(R.id.header_text);
+        mStickyBar = (FrameLayout) view.findViewById(R.id.frame_sticky_bar);
 
         // ListViewのHeaderViewに、Header、StickyBarと同じ高さのダミーヘッダーを設定
         View listHeader = inflater.inflate(R.layout.ex2_list_header, container, false);

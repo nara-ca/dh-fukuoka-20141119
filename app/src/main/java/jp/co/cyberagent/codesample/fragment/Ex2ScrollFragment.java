@@ -8,8 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
 import jp.co.cyberagent.codesample.R;
 import jp.co.cyberagent.codesample.widget.ObservableScrollView;
 
@@ -21,12 +19,9 @@ public class Ex2ScrollFragment extends Fragment implements ObservableScrollView.
     private int mHeaderHeight;
     private int mStickyBarHeight;
 
-    @InjectView(R.id.ex2_scroll)
-    ObservableScrollView mScrollView;
-    @InjectView(R.id.frame_header)
-    FrameLayout mHeader;
-    @InjectView(R.id.frame_sticky_bar)
-    FrameLayout mStickyBar;
+    private ObservableScrollView mScrollView;
+    private FrameLayout mHeader;
+    private FrameLayout mStickyBar;
 
     /**
      * Use this factory method to create a new instance of
@@ -57,7 +52,10 @@ public class Ex2ScrollFragment extends Fragment implements ObservableScrollView.
             Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.ex2_scroll_fragment, container, false);
-        ButterKnife.inject(this, view);
+
+        mScrollView = (ObservableScrollView) view.findViewById(R.id.ex2_scroll);
+        mHeader = (FrameLayout) view.findViewById(R.id.frame_header);
+        mStickyBar = (FrameLayout) view.findViewById(R.id.frame_sticky_bar);
 
         // このFragmentをScrollViewのリスナーに設定
         mScrollView.addCallbacks(this);
